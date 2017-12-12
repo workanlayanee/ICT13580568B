@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="ICT13580568B.testbook2710"
+    Title="สร้างลูกค้าใหม่">
+    <ScrollView
+        Padding="20">
+        <StackLayout
+            Orientation="Vertical">
+            <Label
+                Text="ชื่อ"
+                FontSize="14"
+                TextColor="Green"/>
+            <Entry
+                Placeholder="ชื่อ" 
+                Keyboard="Text"/>
+            <Label
+                Text="นามสกุล"
+                FontSize="14"
+                TextColor="Green"/>
+            <Entry
+                Placeholder="นามสกุล" 
+                Keyboard="Text"/>
+            <Label
+                Text="เพศ"
+                FontSize="14"
+                TextColor="Green" />
+            <Picker
+                x:Name="genderPicker"
+                Title="เลือกเพศ" />
+            <Label
+                Text="วันเกิด"
+                FontSize="14"
+                TextColor="Green" />
+            <DatePicker />
+            <Label
+                Text="เบอร์โทรศัพท์"
+                FontSize="14"
+                TextColor="Green" />
+            <Entry
+                Placeholder="เบอร์โทรศัพท์"
+                Keyboard="Telephone" />
+            <Label
+                Text="อีเมล"
+                FontSize="14"
+                TextColor="Green" />
+            <Entry
+                Placeholder="อีเมล"
+                Keyboard="Email" />
+            <Label
+                Text="เว็บไซต์"
+                FontSize="14"
+                TextColor="Green" />
+            <Entry
+                Placeholder="เว็บไซต์"
+                Keyboard="Url" />
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                    Text="เงินเดือน"
+                    TextColor="Green" />
+                <Label
+                    x:Name="salaryLabel"
+                    Text="0" />
+                <Label
+                    Text="บาท" />
+            </StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition
+                        Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Text="0"
+                    VerticalTextAlignment="Center" />
+                <Slider
+                    x:Name="salarySlider"
+                    Grid.Column="1"
+                    Maximum="100000"
+                    Minimum="0"
+                    Value="0" />
+                <Label
+                    Text="100,000"
+                    Grid.Column="2"
+                    VerticalTextAlignment="Center" />
+            </Grid>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                    Text="แต่งงาน?"
+                    TextColor="Green"
+                    VerticalTextAlignment="Center" />
+                <Switch />
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                    Text="บุตร"
+                    TextColor="Green"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    x:Name="childrenLabel"
+                    Text="0"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    Text="คน"
+                    VerticalTextAlignment="Center" />
+            </StackLayout>
+            <Stepper
+                x:Name="childrenStepper"
+                Maximum="10"
+                Minimum="0"
+                Value="0"
+                WidthRequest="600" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button
+                    Text="ยกเลิก"
+                    TextColor="White"
+                    BackgroundColor="Red" />
+                <Button
+                    Text="บันทึก"
+                    TextColor="White"
+                    BackgroundColor="Green"
+                    Grid.Column="1" />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
